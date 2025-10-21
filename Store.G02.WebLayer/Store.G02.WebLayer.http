@@ -1,0 +1,6 @@
+@Store.G02.WebLayer_HostAddress = http://localhost:5274
+
+GET {{Store.G02.WebLayer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
