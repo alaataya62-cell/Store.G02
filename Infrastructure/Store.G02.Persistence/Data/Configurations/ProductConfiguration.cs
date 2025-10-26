@@ -16,7 +16,7 @@ namespace Store.G02.Persistence.Data.Configurations
         {
             builder.Property(p => p.Name).HasColumnType("varchar").HasMaxLength(256);
             builder.Property(p => p.Description).HasColumnType("varchar").HasMaxLength(512);
-            builder.Property(p => p.PicturUrl).HasColumnType("varchar").HasMaxLength(256);
+            builder.Property(p => p.PictureUrl).HasColumnType("varchar").HasMaxLength(256);
            builder.Property(p => p.Price).HasColumnType("decimal(18,2)");
 
             builder.HasOne(P => P.Type)

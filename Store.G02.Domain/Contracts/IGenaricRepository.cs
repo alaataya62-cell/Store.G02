@@ -8,7 +8,7 @@ namespace Store.G02.Domain.Contracts
 {
   public interface IGenaricRepository<IKey, IEntity> where IEntity : BaseEntity<IKey>
     {
-        Task<IEnumerable<IEntity>> GetAllAsync();
+        Task<IEnumerable<IEntity>> GetAllAsync(bool changetrack = false);
         Task<IEntity?> GetAsync(IKey key);
         Task AddAsync(IEntity entity);
         void UpdateAsync(IEntity entity);
