@@ -14,6 +14,9 @@ namespace Store.G02.Persistence.Data.Configurations
         public void Configure(EntityTypeBuilder<ProductBrand> builder)
         {
             builder.Property(B => B.Name).HasColumnType("varchar").HasMaxLength(256);
+
+
+
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Store.G02.Persistence
             if ( !_context.ProductBrands.Any())
             {
                
-                var branddata = File.ReadAllText(@"../Infrastructure\Store.G02.Persistence\Data\DataSeeding\brands.json");
+                var branddata =  File.ReadAllText(@"../Infrastructure\Store.G02.Persistence\Data\DataSeeding\brands.json");
                 var brand = JsonSerializer.Deserialize<List<ProductBrand>>(branddata);
                 if (brand is not null && brand.Count > 0)
                 {
@@ -48,7 +48,7 @@ namespace Store.G02.Persistence
                     await _context.Products.AddRangeAsync(product);
                 }
             }
-            await _context.SaveChangesAsync();
+            _context.SaveChangesAsync();
         }
 
             

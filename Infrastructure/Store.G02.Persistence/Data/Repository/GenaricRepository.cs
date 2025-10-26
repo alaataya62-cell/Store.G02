@@ -30,11 +30,6 @@ namespace Store.G02.Persistence.Data.Repository
                : await _context.Set<TEntity>().AsNoTracking().ToListAsync();
         }
 
-        public Task<IEnumerable<TEntity>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<TEntity?> GetAsync(IKey key)
         {
             return _context.Set<TEntity>().FindAsync(key).AsTask();
